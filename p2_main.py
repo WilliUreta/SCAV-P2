@@ -4,7 +4,7 @@ import subprocess
 def cut_n_seconds(path,seconds, output_name):
 
     #os.system()
-    subprocess.call(["ffmpeg", "-i", path, "-ss", "20", "-t", str(seconds),
+    subprocess.call(["ffmpeg", "-i", path, "-t", str(seconds),
                     "-c:v", "copy", "-c:a", "copy", output_name])
 
 # ffmpeg -i BBB.mp4 -ss 20 -t 10 -c:v copy -c:a copy cut_BBB.mp4
